@@ -93,7 +93,7 @@
                   </li>
                   <!-- age -->
                   <li>
-                    <h6>Age:</h6><span>28</span>
+                    <h6>Age:</h6><span id="age"></span>
                   </li>
                 </ul>
               </div>
@@ -309,7 +309,7 @@
                         <!-- main title -->
                         <div class="art-banner-title">
                           <!-- title -->
-                          <h1 class="mb-15">Discover my Amazing <br>Art Space!</h1>
+                          <h1 class="mb-15">Discover my Amazing <br>Tech Space!</h1>
                           <!-- suptitle -->
                           <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; I build <span class="txt-rotate" data-period="2000"
                               data-rotate='[ "web interfaces.", "backend microservice.", "sofware architecture.", "ios and android applications." ]'></span>&lt;/<i>code</i>&gt;</div>
@@ -658,6 +658,22 @@
 
   <!-- main js -->
   <script src="js/main.js"></script>
+
+  <script>
+    const timeElapsed = Date.now();
+    const today = new Date(timeElapsed);
+    var date1 = new Date("06/30/1993");
+    var date2 = today;
+      
+    // To calculate the time difference of two dates
+    var Difference_In_Time = today - date1.getTime();
+      
+    // To calculate the no. of days between two dates
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24 * 365);
+
+    document.getElementById("age").textContent = Math.round(Difference_In_Days);
+
+  </script>
 
 </body>
 
